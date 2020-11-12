@@ -7,7 +7,8 @@ const app = express();
 
 
 // routes
-const userRoutes = require('./routes/user.js');
+const authRoutes = require('./routes/auth');
+const adminRoutes = require('./routes/admin/auth');
 
 // ENV variables 
 env.config();
@@ -26,7 +27,9 @@ mongoose.connect(
 // to acces the data send through post method
 app.use(bodyParser.urlencoded({extended:false})) 
 app.use(bodyParser.json());
-app.use('/api', userRoutes);
+
+app.use('/api', authRoutes);
+app.use('/api', adminRoutes);
 
 app.listen(process.env.PORT, () => {
     console.log(`Server started at port : ${process.env.PORT}`);
