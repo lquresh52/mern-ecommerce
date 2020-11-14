@@ -3,6 +3,8 @@ const env = require('dotenv');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
+const cors = require('cors');
+
 const app = express();
 
 
@@ -27,7 +29,8 @@ mongoose.connect(
         console.log("DATABSE CONNECTED.")
     });
 
-// to acces the data send through post method
+app.use(cors());
+    // to acces the data send through post method
 app.use(bodyParser.urlencoded({extended:false})) 
 app.use(bodyParser.json());
 

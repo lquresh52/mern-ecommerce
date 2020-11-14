@@ -7,11 +7,11 @@ import { Form } from 'react-bootstrap';
 
 const Input = (props) => {
   return(
-    <Form.Group controlId="formBasicEmail">
+    <Form.Group controlId={props.placeholder}>
         <Form.Label>{props.label}</Form.Label>
         <Form.Control 
             type={props.type}
-            placeholder={props.placeholder} 
+            placeholder= {props.placeholder}
             value={props.value}
             onChange={props.onChange}
         />

@@ -21,7 +21,7 @@ const Signup = (props) => {
                                     placeholder="First Name"
                                     value=""
                                     type="text"
-                                    onChannge={() => {}}
+                                    onChange={() => {}}
                                 />
                             </Col>
                             <Col md={6}>
@@ -30,7 +30,7 @@ const Signup = (props) => {
                                     placeholder="Last Name"
                                     value=""
                                     type="text"
-                                    onChannge={() => {}}
+                                    onChange={() => {}}
                                 />
                             </Col>
                         </Row>
@@ -40,7 +40,7 @@ const Signup = (props) => {
                             placeholder="Email"
                             value=""
                             type="email"
-                            onChannge={() => {}}
+                            onChange={() => {}}
                         />
 
                         <Input 
@@ -48,7 +48,7 @@ const Signup = (props) => {
                             placeholder="Password"
                             value=""
                             type="password"
-                            onChannge={() => {}}
+                            onChange={() => {}}
                         />
 
 
